@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: crosshair;
+}
+
+button, input, [role="button"] {
+  cursor: pointer;
+}
+
+/* Remove all default browser styling */
+* {
+  border-radius: 0 !important;
+}
+
+/* Custom selection */
+::selection {
+  background: #FF0000;
+  color: white;
+}
+
+/* Brutal scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-left: 4px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF0000;
+}
+
+/* Border width utility */
+.border-3 {
+  border-width: 3px;
+}
+
+/* Brutal focus states */
+input:focus {
+  outline: 4px solid #FF0000;
+  outline-offset: -4px;
+}
+
+button:focus-visible {
+  outline: 4px solid #FF0000;
+  outline-offset: -4px;
+}
+
+/* Instant transitions - brutalist = no smooth animations */
+* {
+  transition-duration: 0ms !important;
+  animation-duration: 0.01ms !important;
+}
+
+/* Body baseline */
+body {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* Harsh line-through */
+.line-through {
+  text-decoration-thickness: 4px !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .line-through {
+    text-decoration-thickness: 3px !important;
+  }
+}
